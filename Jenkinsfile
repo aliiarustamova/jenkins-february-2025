@@ -18,10 +18,8 @@ podTemplate(cloud: 'kubernetes', label: 'docker', yaml: template) {
 node ("docker") {
     container ("docker") {
     stage ("Checkout SCM") {
-      git branch: 'main', url: 'https://github.com/aliiarustamova/actions-terraform.git'
+      git branch: 'main', url: 'https://github.com/aliiarustamova/jenkins-february-2025.git'
     }
     }
 }
 }
-
-https://github.com/aliiarustamova/jenkins-february-2025.git
