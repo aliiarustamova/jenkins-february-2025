@@ -19,12 +19,7 @@ node ("kubernetes") {
       git branch: 'main', url: 'https://github.com/aliiarustamova/jenkins-february-2025.git'
     }
     stage ("Test") {
-      sh """
-      terraform version
-      kubectl version
-      helm version
-      kubectl get nodes
-      """
+    sh "helm upgrade --install apache ./apache"
     }
     }
 }
