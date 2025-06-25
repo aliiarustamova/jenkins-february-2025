@@ -33,11 +33,11 @@ withCredentials([usernamePassword(credentialsId: 'docker-creds', passwordVariabl
     sh "docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}"
     }
     stage ("Docker Build") {
-        sh "docker build -t ${DOCKER_USER}/myapache:1.0.0 ."
+        sh "docker build -t ${DOCKER_USER}/myapache:2.0.0 ."
     }
 
     stage ("Docker Push") {
-        sh "docker push ${DOCKER_USER}/myapache:1.0.0"
+        sh "docker push ${DOCKER_USER}/myapache:2.0.0"
     }
     }
 }
