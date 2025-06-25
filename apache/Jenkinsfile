@@ -6,6 +6,7 @@ metadata:
     run: kubernetes
   name: kubernetes
 spec:
+  serviceAccount: kubernetes
   containers:
   - image: aliia376/mycommand:1.0.0
     name: kubernetes
